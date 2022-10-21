@@ -1,0 +1,379 @@
+
+// Button
+.ant-btn-primary:hover, .ant-btn-primary:focus,
+.ant-btn-success:hover, .ant-btn-success:focus,
+.ant-btn-warning:hover, .ant-btn-warning:focus,
+.ant-btn-error:hover, .ant-btn-error:focus {
+	color: #fff !important;
+}
+.ant-btn-link {
+	padding: 0;
+	height: auto;
+}
+.ant-btn-link:hover, .ant-btn-link:focus {
+	border-color: transparent !important;
+}
+.ant-btn-sm {
+	font-size: 12px;
+}
+.ant-btn > .anticon + span {
+	margin-left: 3px;
+}
+// .ant-btn .anticon {
+//     vertical-align: middle;
+// }
+
+// Body
+// @line-height-base: 1;
+
+// Card
+.ant-card-head {
+	padding: 0 20px;
+	.ant-card-head-title {
+		font-weight: 600;
+	}
+}
+.ant-card-body {
+	padding: 1px 0 0;
+}
+// Card hover 效果
+.card-border-shadow {
+	border: 1px solid #f0f0f0;
+	transition: all 0.3s;
+	&:hover {
+		border-color: rgba(0, 0, 0, 0.09);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+	}
+}
+
+// Checkbox
+.ant-checkbox-inner, .ant-checkbox-inner::after {
+  transition: none !important;
+}
+
+// Descriptions
+.ant-descriptions {
+	background-color: #fff;
+	padding: 20px 20px 10px;
+	margin: 20px 0;
+}
+
+// Dropdown
+.top-title-dropdown.ant-dropdown-menu {
+	.ant-dropdown-menu-item {
+		line-height: 30px;
+		font-size: 16px;
+	}
+}
+.top-title-dropdown.ant-dropdown-menu-dark {
+	.ant-dropdown-menu-item {
+		span a {
+			color: rgba(255, 255, 255, 0.65);
+		}
+		&:hover,
+		&-selected {
+			span a {
+				color: rgba(255, 255, 255, 1);
+			}
+		}
+	}
+}
+
+// Form
+// 水平搜索框不换行
+.ant-form-inline {
+	flex-wrap: nowrap;
+	overflow-x: auto;
+}
+
+// Input
+textarea.ant-input {
+	line-height: 1.2;
+}
+
+// Menu
+.ant-menu-submenu .ant-menu-item > .ant-menu-title-content,
+.ant-menu-submenu.ant-menu-submenu-popup .ant-menu-item > .ant-menu-title-content {
+	font-size: 14px !important;
+}
+// 用于日志 menu，仅有一级子 menu
+.ant-menu.short-menu {
+	overflow-x: hidden;
+	.ant-menu-submenu-title {
+		height: auto;
+		font-size: 15px;
+		line-height: 30px;
+		padding-left: 0 !important;
+	}
+	.ant-menu-item {
+		height: auto;
+		line-height: 20px;
+		white-space: unset;
+		// padding-left: 20px !important;
+		padding: 6px 0 6px 20px !important;
+		.ant-menu-item-icon {
+			align-self: baseline;
+			margin-top: 2px;
+		}
+	}
+	.ant-menu-item-selected::after {
+		opacity: 0;
+	}
+}
+
+// Modal
+.ant-modal-header {
+	padding: 10px 24px!important;
+}
+.ant-modal-close {
+	color: #c4dcf4;
+	transition: all 0.2s;
+	&:hover {
+		color: #fff;
+		background-color: #f5b923;
+	}
+	.ant-modal-close-x {
+		width: 42px;
+		height: 42px;
+		line-height: 42px;
+	}
+}
+
+// 宽高为 90% 的模态框类名
+.big-modal {
+	.ant-modal-content {
+		display: flex;
+		flex-direction: column;
+		height: calc(90vh);
+	}
+	.ant-modal-body {
+		flex: 1;
+		overflow: auto;
+		display: flex;
+		> .ant-spin-nested-loading {
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 0%;
+			.ant-spin-container {
+				display: flex;
+				flex: 1 1 0%;
+				overflow: auto;
+			}
+		}
+	}
+	.ant-modal {
+		top: 5%;
+		padding: 0;
+	}
+}
+
+.big-modal70 {
+	.ant-modal-content {
+		display: flex;
+		flex-direction: column;
+		height: calc(75vh);
+	}
+	.ant-modal-body {
+		flex: 1;
+		overflow: auto;
+		display: flex;
+		> .ant-spin-nested-loading {
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 0%;
+			.ant-spin-container {
+				display: flex;
+				flex: 1 1 0%;
+				overflow: auto;
+			}
+		}
+	}
+	.ant-modal {
+		top: 15%;
+		padding: 0;
+	}
+}
+.big-modal40 {
+	.ant-modal-content {
+		display: flex;
+		flex-direction: column;
+		height: calc(40vh);
+	}
+	.ant-modal-body {
+		flex: 1;
+		overflow: auto;
+		display: flex;
+		> .ant-spin-nested-loading {
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 0%;
+			.ant-spin-container {
+				display: flex;
+				flex: 1 1 0%;
+				overflow: auto;
+			}
+		}
+	}
+	.ant-modal {
+		top: 35%;
+		padding: 0;
+	}
+}
+
+// 全屏弹窗
+.full-modal {
+  .ant-modal {
+    max-width: 100%;
+    top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+  .ant-modal-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh);
+  }
+  .ant-modal-body {
+    flex: 1;
+		display: flex;
+		overflow: auto;
+		> .ant-spin-nested-loading {
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 0%;
+			.ant-spin-container {
+				display: flex;
+				flex: 1 1 0%;
+				overflow: auto;
+			}
+		}
+  }
+}
+
+// Notifiction
+.ant-notification-notice-message,
+.ant-notification-notice-description {
+	overflow-wrap: anywhere;
+}
+
+// Page header
+.ant-page-header {
+	margin-top: -12px;
+	padding: 0;
+}
+
+// Pagination
+.ant-table-pagination.ant-pagination {
+	margin: 16px 16px 16px 0;
+}
+
+// Popover
+// 解决 ant-design 与 tailwind 的样式冲突
+// .ant-popover-message > .anticon {
+//   top: 4px;
+// }
+.ant-popover.cs-notify__overlay {
+	min-width: 400px;
+	.ant-popover-inner-content {
+		padding-top: 0;
+	}
+}
+
+// Picker
+table.ant-picker-content {
+	border: none;
+}
+
+// Radio
+.ant-radio-inner, .ant-radio-inner::after {
+  transition: none !important;
+}
+
+// Steps
+.ant-steps-item-active .ant-steps-item-title {
+	font-weight: 600;
+}
+
+// Table
+.ant-table {
+	// 筛选图标靠近文字
+	.ant-table-thead > tr > th {
+		.anticon-filter,
+		.ant-table-filter-icon {
+			right: auto;
+		}
+	}
+	.ant-table-body {
+		overflow-x: auto !important;
+		overflow-y: auto !important;
+	}
+	.ant-table-placeholder {
+		display: flex;
+		.ant-empty.ant-empty-normal {
+			margin: auto;
+		}
+	}
+}
+
+// Tabs 改为 flex 布局
+.ant-tabs {
+	display: flex;
+	flex-direction: column;
+	// height: 100%;
+	.ant-tabs-content {
+		flex: 1;
+		height: 100%;
+		// overflow: auto;
+	}
+	&.ant-tabs-line {
+		flex: 1;
+	}
+	.ant-tabs-tabpane {
+		display: flex;
+		height: 100%;
+	}
+	&.ant-tabs-vertical {
+		flex-direction: row;
+		// height: 100%;
+		.ant-tabs-content {
+			height: 100%;
+			.ant-tabs-tabpane {
+				height: 100%;
+				display: flex;
+				&.ant-tabs-tabpane-inactive {
+					height: 0;
+				}
+			}
+		}
+	}
+}
+
+// Tag
+.ant-tag {
+	font-size: 0.9rem;
+}
+
+// Tree
+.ant-tree li .ant-tree-node-content-wrapper {
+	transition: none;
+}
+.ant-tree-checkbox-inner {
+	transition: none;
+}
+.ant-select-tree {
+	max-height: 600px;
+}
+
+// Tooltip
+.ant-tooltip {
+	max-width: 400px;
+}
+.ant-tooltip.ant-menu-inline-collapsed-tooltip .ant-tooltip-inner {
+	line-height: 32px;
+	a {
+		color: #fff;
+		.anticon + span {
+			margin-left: 10px;
+		}
+	}
+}

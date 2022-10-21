@@ -1,0 +1,56 @@
+// <a>
+a.a-normal {
+	color: @text-color;
+	&:hover {
+		color: @link-color;
+	}
+}
+a.a-danger {
+	color: #ff4d4f;
+	&:hover {
+		color: #ff7875;
+	}
+}
+
+.with-bg {
+	background-color: #fff;
+}
+
+.echarts-tooltip {
+	max-width: 400px;
+	max-height: 400px;
+	overflow: auto;
+}
+
+
+// 用于首页 circle 旋转
+@keyframes traverse-up-left {
+  100% {
+    transform: translateY(-200px) translateX(-350px) rotate(180deg);
+  }
+}
+@keyframes traverse-up-right {
+  100% {
+    transform: translateY(-300px) translateX(300px) rotate(1turn);
+  }
+}
+
+html[data-theme="dark"] {
+	a {
+		color: @primary-5;
+		&:hover {
+			color: @primary-4;
+		}
+	}
+	a.a-normal:hover {
+		color: @primary-5;
+	}
+	.with-bg {
+		background-color: @dark-bg-light;
+	}
+
+	.echarts-tooltip {
+		background-color: @dark-bg-light !important;
+		color: #fff !important;
+	}
+}

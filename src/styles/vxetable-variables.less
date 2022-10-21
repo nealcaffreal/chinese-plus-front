@@ -1,0 +1,140 @@
+.vxe-button {
+  &.is--disabled {
+    color: #bfbfbf !important;
+    .vxe-button--icon {
+      &.vxe-icon--zoomin {
+        border-color: #bfbfbf !important;
+      }
+    }
+  }
+}
+
+.vxe-table--render-default.size--mini {
+  font-size: .9rem;
+}
+
+.vxe-input--inner {
+  border-radius: 0;
+}
+.vxe-pager {
+  .vxe-pager--jump-prev,
+  .vxe-pager--prev-btn,
+  .vxe-pager--next-btn,
+  .vxe-pager--jump-next,
+  .vxe-pager--num-btn {
+    background-color: #f1f2f4;
+  }
+  .vxe-pager--jump .vxe-pager--goto {
+    border-radius: 0;
+  }
+}
+// 解决 a-popover 层级高于 vxe-table-tooltip 问题
+.vxe-table--tooltip-wrapper {
+  z-index: 1031!important;
+}
+
+// dark 主题
+html[data-theme="dark"] {
+  .vxe-table--render-default {
+    color: #fff;
+    .vxe-table--border-line {
+      border: 1px solid @dark-border;
+    }
+    .vxe-table--header-wrapper {
+      color: #fff;
+      background-color: @dark-bg-light;
+      .vxe-table--header-border-line {
+        border-bottom: 1px solid @dark-border;
+      }
+      .vxe-header--column:hover {
+        background-color: transparent;
+      }
+      .vxe-cell--filter .vxe-filter--btn,
+      .vxe-sort--asc-btn,
+      .vxe-sort--desc-btn {
+        color: #82858b;
+        &:hover {
+          color: #c0c4cc;
+        }
+      }
+
+      .is--filter-active .vxe-cell--filter .vxe-filter--btn,
+      .vxe-sort--asc-btn.sort--active,
+      .vxe-sort--desc-btn.sort--active {
+        color: #409eff;
+      }
+    }
+
+    .vxe-header--column, .vxe-body--column, .vxe-footer--column {
+      background-image: linear-gradient(@dark-border, @dark-border), linear-gradient(@dark-border, @dark-border);
+    }
+
+    .vxe-body--row.row--stripe, .vxe-body--row.row--hover {
+      background-color: @dark-bg-light;
+    }
+
+    .vxe-body--row.row--current {
+      background-color: @dark-bg-light-1;
+    }
+
+    .vxe-table--body-wrapper {
+      background-color: @dark-bg-normal;
+    }
+
+    .vxe-table--filter-wrapper {
+      border: 1px solid @dark-border;
+      background-color: @dark-bg-light-1;
+      .vxe-table--filter-footer {
+        border-top: 1px solid @dark-border;
+        button {
+          color: #ccc;
+          &:hover {
+            color: @primary-5;
+          }
+          &.is--disabled {
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+
+  // .vxe-table .vxe-table--header-wrapper {
+  //   color: #fff;
+  // }
+
+  .vxe-pager {
+    color: #ccc;
+    background-color: @dark-bg-light;
+    .vxe-pager--jump-prev,
+    .vxe-pager--prev-btn,
+    .vxe-pager--next-btn,
+    .vxe-pager--jump-next,
+    .vxe-pager--num-btn {
+      background-color: @dark-bg-light-1;
+    }
+
+    .vxe-input--inner {
+      color: #ccc;
+      border: 1px solid @dark-border;
+      background-color: @dark-bg-light-1;
+    }
+
+    .vxe-select--panel {
+      color: #ccc;
+    }
+    .vxe-select-option--wrapper {
+      border: 1px solid @dark-border;
+      background-color: @dark-bg-light-1;
+      .vxe-select-option:not(.is--disabled).is--hover {
+        background-color: @dark-bg-light;
+      }
+    }
+
+    .vxe-pager--jump .vxe-pager--goto {
+      color: #ccc;
+      border: 1px solid @dark-border;
+      background-color: @dark-bg-light-1;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      (function () {
+        function IEVersion() {
+          const userAgent = navigator.userAgent.toLowerCase()
+          const isIE = userAgent.includes('compatible') && userAgent.includes('msie')
+          if (isIE) {
+            // const reIE = new RegExp('msie (\\d+\\.\\d+);')
+            const reIE = /msie (\\d+\\.\\d+);/
+            reIE.test(userAgent)
+            const fIEVersion = parseFloat(RegExp.$1)
+            if (fIEVersion < 10)
+              return true
+          }
+          else {
+            return false
+          }
+        }
+        const tpl = `
+    <div style="position:absolute;left:50%;top:30%;max-width:640px;width:86%;background-color:#f1f1f1;transform:translateX(-50%);padding:20px 40px;box-sizing:border-box;border:1px solid #e5e6eb;"><div style="font-size:20px;color:#333;line-height:2"><strong>提示：</strong>您的浏览器版本过低，可能存在安全风险！<br/>同时为了获得更好的网页浏览体验，建议您使用<strong>高版本</strong>的检察机关专用浏览器、Chrome 或 Firefox。</div></div>`
+        window.onload = function () {
+          if (IEVersion())
+            document.write(tpl)
+        }
+      })()
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+    <script src="/config.js"></script>
+  </body>
+</html>

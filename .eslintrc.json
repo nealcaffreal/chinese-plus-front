@@ -1,0 +1,6 @@
+{
+  "extends": "@intelli-fe",
+  "env": {
+    "vue/setup-compiler-macros": true
+  }
+}

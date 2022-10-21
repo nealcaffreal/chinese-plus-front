@@ -1,0 +1,101 @@
+html[data-theme="dark"] {
+
+  // badge
+  .ant-badge-count {
+    background: #ff4d4f;
+    box-shadow: 0 0 0 1px #fff;
+  }
+
+  // button
+  .ant-btn-link {
+    color: @primary-5;
+    &:hover {
+      color: @primary-4;
+    }
+  }
+
+  // calendar
+  .ant-calendar-selected-day .ant-calendar-date {
+    background: @dark-bg-light-1;
+  }
+
+  // card
+  .ant-card-head {
+    border-bottom: 1px solid @dark-border;
+  }
+
+  // checkbox
+  // 这属于 ant-design 自身 bug，需要显示设置该 css
+  .ant-checkbox-checked .ant-checkbox-inner::after {
+    border-top: 0;
+    border-left: 0;
+  }
+
+  // description
+  .ant-descriptions {
+    background-color: @dark-bg-light;
+  }
+  .ant-descriptions-bordered {
+    .ant-descriptions-view {
+      border: 1px solid @dark-border;
+    }
+    .ant-descriptions-row {
+      border-bottom: 1px solid @dark-border;
+    }
+    .ant-descriptions-row:last-child {
+      border-bottom: none;
+    }
+    .ant-descriptions-item-label, .ant-descriptions-item-content {
+      border-right: 1px solid @dark-border;
+    }
+    .ant-descriptions-item-label:last-child, .ant-descriptions-item-content:last-child {
+      border-right: none;
+    }
+  }
+
+  // empty
+  .ant-empty-img-simple-path {
+    fill: @dark-bg-light;
+  }
+  .ant-empty-img-simple-ellipse {
+    fill: @dark-bg-light-1;
+  }
+
+  // list
+  .ant-list-split .ant-list-item {
+    border-bottom: 1px solid @dark-border;
+  }
+
+  // Modal
+  .ant-modal-close {
+    color: #999;
+    &:hover {
+      background-color: @dark-bg-light-1;
+    }
+  }
+
+  // Date Picker
+  .ant-picker-input > input {
+    border: none;
+  }
+  
+
+  // select
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background-color: @dark-bg-light-1;
+  }
+  
+  // timeline
+  .ant-timeline-item-head {
+    background-color: @dark-bg-light;
+  }
+  .ant-timeline-item-tail {
+    border-left: 2px solid @dark-border;
+  }
+
+  // 步骤
+  .ant-steps-navigation .ant-steps-item::after {
+    border-bottom: none;
+    border-left: none;
+  }
+}
