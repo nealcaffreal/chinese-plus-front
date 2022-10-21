@@ -2,7 +2,7 @@
   "name": "vite-starter-1",
   "version": "1.0.0",
   "description": "",
-  "author": "lianchi",
+  "author": "**",
   "scripts": {
     "dev": "vite --host",
     "build": "cross-env NODE_ENV=production vite build",
